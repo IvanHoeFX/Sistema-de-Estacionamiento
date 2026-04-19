@@ -4,8 +4,8 @@ public class Vehiculo {
     private String placa;
     private int horaEntrada;
 
-    public Vehiculo(String placa, int horaEntrada) {
-        this.placa = placa;
+    public Vehiculo(String placas, int horaEntrada) {
+        this.placa = placas;
         this.horaEntrada = horaEntrada;
     }
 
