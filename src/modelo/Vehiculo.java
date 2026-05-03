@@ -1,21 +1,22 @@
 package modelo;
 
-public class Vehiculo {
-    private String placa;
-    private int horaEntrada;
+import java.time.LocalTime;
 
-    public Vehiculo(String placas, int horaEntrada) {
-        this.placa = placas;
+public class Vehiculo {
+
+    private String placa;
+    private LocalTime horaEntrada;
+
+    public Vehiculo(String placa, LocalTime horaEntrada) {
+        this.placa = placa;
         this.horaEntrada = horaEntrada;
     }
 
     public String getPlaca() {
         return placa;
     }
-    
-    // prueba stash
-    public int getHoraEntrada() {
+
+    public LocalTime getHoraEntrada() {
         return horaEntrada;
     }
 }
-

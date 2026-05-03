@@ -1,0 +1,6 @@
+Ingreso: ABC-123 Hora: 17:40
+Entrada: 17:40 | Salida: 18:50 | Pago: 3.5
+Ingreso: ABC-123 Hora: 17:40
+Entrada: 17:40 | Salida: 19:40 | Pago: 6.0
+Ingreso: ABC-123 Hora: 17:40
+Entrada: 17:40 | Salida: 19:40 | Pago: 6.0
