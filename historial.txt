@@ -1,0 +1,243 @@
+
+========== INGRESO ==========
+Placa: JKL-456
+Hora Entrada: 14:25
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JFK-321
+Hora Entrada: 15:45
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: KFC-369
+Hora Entrada: 12:15
+Espacio: 3
+==============================
+
+================ TICKET ================
+N° Ticket: 1
+Fecha: 2026-05-16
+Placa: JFK-321
+Hora Entrada: 15:45
+Hora Salida: 17:30
+Monto Pagado: S/. 5.25
+========================================
+
+========== INGRESO ==========
+Placa: JKL-456
+Hora Entrada: 14:25
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JFK-321
+Hora Entrada: 15:30
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: KFC-369
+Hora Entrada: 12:50
+Espacio: 3
+==============================
+
+================ TICKET ================
+N° Ticket: 2
+Fecha: 2026-05-16
+Placa: JFK-321
+Hora Entrada: 15:30
+Hora Salida: 17:45
+Monto Pagado: S/. 6.75
+========================================
+
+========== INGRESO ==========
+Placa: JKL-456
+Hora Entrada: 14:25
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JFK-321
+Hora Entrada: 15:50
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: KFC-369
+Hora Entrada: 13:20
+Espacio: 3
+==============================
+
+================ TICKET ================
+N° Ticket: 3
+Fecha: 2026-05-16
+Placa: JFK-321
+Hora Entrada: 15:50
+Hora Salida: 18:55
+Monto Pagado: S/. 9.25
+========================================
+
+========== INGRESO ==========
+Placa: JFK-369
+Hora Entrada: 12:30
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: KFC-321
+Hora Entrada: 14:25
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: PLM-582
+Hora Entrada: 16:40
+Espacio: 3
+==============================
+
+
+================ TICKET ================
+N° Ticket: 4
+Fecha: 2026-05-16
+Placa: KFC-321
+Hora Entrada: 14:25
+Hora Salida: 18:17
+Monto Pagado: S/. 13.53
+========================================
+
+========== INGRESO ==========
+Placa: PQL-356
+Hora Entrada: 11:33
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: QRT-667
+Hora Entrada: 01:45
+Espacio: 4
+==============================
+
+
+================ TICKET ================
+N° Ticket: 5
+Fecha: 2026-05-16
+Placa: QRT-667
+Hora Entrada: 01:45
+Hora Salida: 02:30
+Monto Pagado: S/. 2.63
+========================================
+
+========== INGRESO ==========
+Placa: JFK-321
+Hora Entrada: 12:30
+Espacio: 1
+==============================
+
+
+================ TICKET ================
+N° Ticket: 6
+Fecha: 2026-05-16
+Placa: JFK-321
+Hora Entrada: 12:30
+Hora Salida: 15:20
+Monto Pagado: S/. 8.5
+========================================
+
+========== INGRESO ==========
+Placa: JKL-123
+Hora Entrada: 12:00
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JKL-123
+Hora Entrada: 12:00
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JKL-123
+Hora Entrada: 12:00
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JKL-123
+Hora Entrada: 12:15
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JKL-456
+Hora Entrada: 12:30
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: FGH-456
+Hora Entrada: 15:30
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: JFK-321
+Hora Entrada: 12:15
+Espacio: 3
+==============================
+
+========== INGRESO ==========
+Placa: TYU-789
+Hora Entrada: 14:25
+Espacio: 4
+==============================
+
+
+================ TICKET ================
+N° Ticket: 7
+Fecha: 2026-05-17
+Placa: TYU-789
+Hora Entrada: 14:25
+Hora Salida: 15:00
+Monto Pagado: S/. 1.75
+========================================
+
+========== INGRESO ==========
+Placa: PQL-356
+Hora Entrada: 11:33
+Espacio: 1
+==============================
+
+========== INGRESO ==========
+Placa: JFK-369
+Hora Entrada: 12:30
+Espacio: 2
+==============================
+
+========== INGRESO ==========
+Placa: KFC-123
+Hora Entrada: 14:50
+Espacio: 3
+==============================
+
+
+================ TICKET ================
+N° Ticket: 8
+Fecha: 2026-05-17
+Placa: JFK-369
+Hora Entrada: 12:30
+Hora Salida: 15:30
+Monto Pagado: S/. 9.0
+========================================
+
+
+================ TICKET ================
+N° Ticket: 9
+Fecha: 2026-05-17
+Placa: PQL-356
+Hora Entrada: 11:33
+Hora Salida: 17:00
+Monto Pagado: S/. 19.08
+========================================

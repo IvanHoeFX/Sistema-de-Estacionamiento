@@ -1,39 +1,89 @@
 package modelo;
 
-import java.time.LocalTime;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Ticket {
 
+    private int numeroTicket;
+
+    private String placa;
+
+    private LocalDate fecha;
+
     private LocalTime horaEntrada;
+
     private LocalTime horaSalida;
+
     private double monto;
 
-    public void setHoraEntrada(LocalTime horaEntrada) {
-        this.horaEntrada = horaEntrada;
+    public Ticket() {
+
+        numeroTicket =
+                ArchivoUtil.generarNumeroTicket();
+
+        fecha =
+                LocalDate.now();
     }
 
-    public void setHoraSalida(LocalTime horaSalida) {
-        this.horaSalida = horaSalida;
+    public void setPlaca(String placa) {
+
+        this.placa = placa;
     }
 
-    public double calcularMonto(double tarifaPorHora) {
+    public void setHoraEntrada(
+            LocalTime horaEntrada) {
 
-        long minutos = Duration.between(horaEntrada, horaSalida).toMinutes();
+        this.horaEntrada =
+                horaEntrada;
+    }
 
-        if (minutos < 0) {
-            return 0;
-        }
+    public void setHoraSalida(
+            LocalTime horaSalida) {
 
-        double horas = minutos / 60.0;
-        monto = horas * tarifaPorHora;
+        this.horaSalida =
+                horaSalida;
+    }
+
+    public double calcularMonto(
+            double tarifaPorHora) {
+
+        long minutos =
+                Duration.between(
+                        horaEntrada,
+                        horaSalida)
+                        .toMinutes();
+
+        double horas =
+                minutos / 60.0;
+
+        monto =
+                horas * tarifaPorHora;
+
+        monto =
+                Math.round(
+                        monto * 100.0)
+                        / 100.0;
 
         return monto;
     }
 
     public String generarResumen() {
-        return "Entrada: " + horaEntrada +
-               " | Salida: " + horaSalida +
-               " | Pago: " + monto;
+
+        return "\n================ TICKET ================"
+                + "\nN° Ticket: "
+                + numeroTicket
+                + "\nFecha: "
+                + fecha
+                + "\nPlaca: "
+                + placa
+                + "\nHora Entrada: "
+                + horaEntrada
+                + "\nHora Salida: "
+                + horaSalida
+                + "\nMonto Pagado: S/. "
+                + monto
+                + "\n========================================";
     }
 }

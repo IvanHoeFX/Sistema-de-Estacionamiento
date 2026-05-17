@@ -4,3 +4,41 @@ Ingreso: ABC-123 Hora: 17:40
 Entrada: 17:40 | Salida: 19:40 | Pago: 6.0
 Ingreso: ABC-123 Hora: 17:40
 Entrada: 17:40 | Salida: 19:40 | Pago: 6.0
+Ingreso: cde-345 Hora: 16:30
+Ingreso: CDE-345 Hora: 14:20
+Entrada: 14:20 | Salida: 17:55 | Pago: 10.75
+Ingreso: FGH-678 Hora: 13:10
+Entrada: 13:10 | Salida: 16:50 | Pago: 11.0
+Ingreso: BNM-456 Hora: 22:10
+Entrada: 22:10 | Salida: 23:59 | Pago: 5.45
+Ingreso: ABC-789 Hora: 20:38
+Entrada: 20:38 | Salida: 22:30 | Pago: 5.6
+Ingreso: AAQ-557 Hora: 21:00
+Ingreso: ASD-123 Hora: 12:45
+Ingreso: ADS-456 Hora: 15:45
+Entrada: 15:45 | Salida: 18:51 | Pago: 9.3
+Ingreso: ZXC-123 Hora: 12:00
+Entrada: 12:00 | Salida: 15:00 | Pago: 9.0
+INGRESO -> QWE-789 | Hora: 11:00
+
+========== TICKET ==========
+Ticket N°: 1
+Fecha: 2026-05-15
+Placa: QWE-789
+Hora Entrada: 11:00
+Hora Salida: 17:00
+Monto Pagado: S/. 21.0
+============================
+INGRESO QRT-789
+INGRESO QRT-456
+INGRESO QRT-456
+
+================ TICKET ================
+N° Ticket: 1
+Fecha: 2026-05-15
+Placa: QRT-456
+Hora Entrada: 12:35
+Hora Salida: 17:55
+Monto Pagado: S/. 16.0
+========================================
+INGRESO FGH-654

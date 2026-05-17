@@ -1,33 +1,265 @@
 package modelo;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class ArchivoUtil {
 
-    private static final String RUTA_ARCHIVO = "registro.txt";
+    // =========================
+    // ARCHIVOS DEL SISTEMA
+    // =========================
+    private static final String ARCHIVO_HISTORIAL =
+            "historial.txt";
 
-    public static void guardarRegistro(String texto) {
+    private static final String ARCHIVO_CONTADOR =
+            "contador_ticket.txt";
 
-        if (texto == null || texto.isEmpty()) {
-            System.out.println("No hay información para guardar");
-            return;
-        }
+    // =========================
+    // GUARDAR INGRESOS
+    // =========================
+    public static void guardarIngreso(
+            Vehiculo v) {
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(RUTA_ARCHIVO, true))) {
-            bw.write(texto);
+        try {
+
+            BufferedWriter bw =
+                    new BufferedWriter(
+                            new FileWriter(
+                                    ARCHIVO_HISTORIAL,
+                                    true));
+
             bw.newLine();
+
+            bw.write(
+                    "========== INGRESO ==========");
+
+            bw.newLine();
+
+            bw.write(
+                    "Placa: "
+                    + v.getPlaca());
+
+            bw.newLine();
+
+            bw.write(
+                    "Hora Entrada: "
+                    + v.getHoraEntrada());
+
+            bw.newLine();
+
+            bw.write(
+                    "Espacio: "
+                    + v.getEspacio());
+
+            bw.newLine();
+
+            bw.write(
+                    "==============================");
+
+            bw.newLine();
+
+            bw.close();
+
         } catch (IOException e) {
-            System.out.println("Error al guardar: " + e.getMessage());
+
+            System.out.println(
+                    "Error guardando ingreso");
         }
     }
 
-    public static void guardarTicket(Ticket t) {
+    // =========================
+    // GUARDAR TICKET
+    // =========================
+    public static void guardarTicket(
+            Ticket t) {
 
-        if (t == null) {
-            System.out.println("Ticket nulo, no se puede guardar");
-            return;
+        try {
+
+            BufferedWriter bw =
+                    new BufferedWriter(
+                            new FileWriter(
+                                    ARCHIVO_HISTORIAL,
+                                    true));
+
+            bw.newLine();
+
+            bw.write(
+                    t.generarResumen());
+
+            bw.newLine();
+
+            bw.close();
+
+        } catch (IOException e) {
+
+            System.out.println(
+                    "Error guardando ticket");
+        }
+    }
+
+    // =========================
+    // LEER HISTORIAL COMPLETO
+    // =========================
+    public static String leerRegistro() {
+
+        StringBuilder sb =
+                new StringBuilder();
+
+        try {
+
+            BufferedReader br =
+                    new BufferedReader(
+                            new FileReader(
+                                    ARCHIVO_HISTORIAL));
+
+            String linea;
+
+            while ((linea = br.readLine())
+                    != null) {
+
+                sb.append(linea)
+                        .append("\n");
+            }
+
+            br.close();
+
+        } catch (IOException e) {
+
+            return "No existe historial";
         }
 
-        guardarRegistro(t.generarResumen());
+        return sb.toString();
+    }
+
+    // =========================
+    // LEER ÚLTIMO REGISTRO
+    // =========================
+    public static String leerUltimoRegistro() {
+
+        ArrayList<String> lineas =
+                new ArrayList<>();
+
+        try {
+
+            BufferedReader br =
+                    new BufferedReader(
+                            new FileReader(
+                                    ARCHIVO_HISTORIAL));
+
+            String linea;
+
+            while ((linea = br.readLine())
+                    != null) {
+
+                lineas.add(linea);
+            }
+
+            br.close();
+
+        } catch (IOException e) {
+
+            return "No hay registros";
+        }
+
+        if (lineas.isEmpty()) {
+
+            return "No hay registros";
+        }
+
+        int inicio = -1;
+
+        // =====================================
+        // BUSCAR ÚLTIMO BLOQUE REAL
+        // =====================================
+        for (int i = lineas.size() - 1;
+             i >= 0;
+             i--) {
+
+            String actual =
+                    lineas.get(i);
+
+            if (actual.contains("INGRESO")
+                    || actual.contains("TICKET")) {
+
+                inicio = i;
+                break;
+            }
+        }
+
+        if (inicio == -1) {
+
+            return "No hay registros";
+        }
+
+        StringBuilder sb =
+                new StringBuilder();
+
+        for (int i = inicio;
+             i < lineas.size();
+             i++) {
+
+            sb.append(
+                    lineas.get(i))
+                    .append("\n");
+        }
+
+        return sb.toString();
+    }
+
+    // =========================
+    // GENERAR NÚMERO DE TICKET
+    // =========================
+    public static int generarNumeroTicket() {
+
+        int numero = 1;
+
+        try {
+
+            BufferedReader br =
+                    new BufferedReader(
+                            new FileReader(
+                                    ARCHIVO_CONTADOR));
+
+            String linea =
+                    br.readLine();
+
+            if (linea != null) {
+
+                numero =
+                        Integer.parseInt(
+                                linea);
+            }
+
+            br.close();
+
+        } catch (Exception e) {
+
+            numero = 1;
+        }
+
+        try {
+
+            BufferedWriter bw =
+                    new BufferedWriter(
+                            new FileWriter(
+                                    ARCHIVO_CONTADOR));
+
+            bw.write(
+                    String.valueOf(
+                            numero + 1));
+
+            bw.close();
+
+        } catch (IOException e) {
+
+            System.out.println(
+                    "Error contador ticket");
+        }
+
+        return numero;
     }
 }
